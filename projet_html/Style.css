@@ -8,10 +8,10 @@
 }
 
 body{
-  background-image : url('background.jpg');
+  background-image : url('background.jpg'), url('canaries.jpg'), url('montagnesoleil'), url('trekzone-photo');
   background-repeat : no-repeat;
-  background-size : cover;
-  background-position : top;
+  background-size : 50% 50%;
+  background-position : top left, top right, bottom left, bottom right;
   display : flex;
   align-items : center;
   justify-content : center;
