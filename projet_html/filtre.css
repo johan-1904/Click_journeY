@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+#login{
+	display: flex;
+	justify-content: right;
+	width: 100%;
+        background-color: #AC9B2D;
+  	padding: 15px 20px;
+  	position: fixed;
+}
+
+.logo {
+  width: 6%;  
+  height: 70px; 
+  position: fixed;        
+  left: 10px; 
+  top: 0px      
+}
+
+
+
+.txt {	width: 6%;
+        color: black;
+        float: right;
+  	padding: 9px;
+  	
+
+        }

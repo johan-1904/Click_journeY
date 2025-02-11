@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TrekDream</title>
+    <link rel="stylesheet" type="text/css" href="filtre2.css">
+</head>
+
+<body>
+<div class="filtre">	
+    <span id="login">
+      	<a class="txt" href="connexion.html">SE CONNECTER</a>
+        <a class="txt" href="inscription.html">S'INSCRIRE</a>
+    </span>
+    <img class="logo" src="cropped-Sans-titre-5.png" alt="logo"/>
+      
+    <div class="contenu">
+
+        <h2>Rechercher un trek</h2>
+        <label for="filtre-region">Région :</label>
+        <input type="text" id="filtre-region" placeholder="Ex: Désert, Montagne...">
+        
+        <label for="filtre-date">Date :</label>
+        <input type="date" id="filtre-date">
+        
+        <label for="filtre-difficulte">Difficulté :</label>
+        <select id="filtre-difficulte">
+            <option value="général">Toutes</option>
+            <option value="facile">Facile</option>
+            <option value="moyenne">Moyenne</option>
+            <option value="difficile">Difficile</option>
+        </select>
+        
+        <label for="filtre-tarif">Budget :</label>
+        <input type="number" id="filtre-tarif" placeholder="Ex: 500€">
+        
+        <button>Rechercher</button>
+        
+        <h3>Résultats :</h3>
+        <div id="liste-treks">
+            <div class="Resultat">
+                <strong>Désert du Sahara</strong> - Maroc - 10 Mars 2025 - Difficulté: Moyenne - Tarif: 600€
+            </div>
+            <div class="Resultat">
+                <strong>EXEMPLE 2</strong> - pays2 - 15 Avril 2025 - Difficulté: Facile - Tarif: 400€
+            </div>
+            <div class="Resultat">
+                <strong>EXEMPLE 3</strong> - pays3 - 20 Mai 2025 - Difficulté: Difficile - Tarif: 800€
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
