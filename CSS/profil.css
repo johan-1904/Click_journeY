@@ -202,10 +202,12 @@ a{
 }
 
 footer {
+    position:absolute;
     padding: 1px;
     background: rgba(0, 0, 0, 0.7);
     bottom: 0;
     width: 100%;
     font-size: 13px; 
+
 
 }
