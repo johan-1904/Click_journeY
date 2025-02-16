@@ -137,9 +137,13 @@ body {
 }
 
 footer {
-    padding: 1px;
+    position: fixed;
+    display: flex;
+    align-items: left;
+    padding: 0px;
     background: rgba(0, 0, 0, 0.7);
     bottom: 0;
     width: 100%;
     font-size: 13px; 
 }
+
