@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('style_inscription.css');
+@import url('style_connexion.css');
+
+
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
+  font-family : 'Poppins', sans-serif;
+}
+
+body{
+  background-image : url('background/background.jpg'), url('background/Canaries.jpg'), url('background/montagnesoleil.jpg'), url('background/trekzone-photo.jpg');
+  background-repeat : no-repeat;
+  background-size : 50% 50%;
+  background-position : top left, top right, bottom left, bottom right;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  height : 100vh;
+}
+
+.name_field{
+  display : flex;
+  justify-content : space-between;
+  width : 100%;
+}
+
+.name_field div{
+  display : flex;
+  flex-direction : column;
+  width : 49%;
+  margin-top : 5px;
+}
+
+input:focus{
+  border : 1px solid #b84a28;
+  outline : 0;
+}
+
+p a{
+  text-decoration : 0;
+  color : #b84a28;
+}
+
+a:hover{
+  text-decoration : underline;
+}
+
+.submit-button:hover{
+  background-color : #a74425;
+}
+
+.logo{
+	width : 150px;
+	height : 90px;
+	position : fixed;
+	left : 10px;
+	top :-11px;
+}
+
+footer {
+    padding: 1px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px; 
+
+}
