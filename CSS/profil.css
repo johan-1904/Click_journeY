@@ -204,7 +204,6 @@ a{
 footer {
     padding: 1px;
     background: rgba(0, 0, 0, 0.7);
-    position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 13px; 
