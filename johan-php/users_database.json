@@ -1,0 +1,20 @@
+[
+    {
+        "nom": "bultelle",
+        "prenom": "johan",
+        "email": "xyz@gmail.com",
+        "password": "motdepasse"
+    },
+    {
+        "nom": "aa",
+        "prenom": "aa",
+        "email": "a@gmail.com",
+        "password": "aaaa"
+    },
+    {
+        "nom": "aqouar",
+        "prenom": "ismael",
+        "email": "ismarretrop@gmail.com",
+        "password": "ismajej"
+    }
+]
