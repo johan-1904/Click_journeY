@@ -10,27 +10,32 @@ function est_connecte($utilisateur){
 	}
 }
 
-function bandeau($utilisateur){
-	
+function bandeau($utilisateur){	
 	if(!est_connecte($utilisateur)){
 	
 	?>
+	<div class="filtre">	
 		<span id="login">     	
-      		<a class="home-icon" href="Profil.php"><i class="fa-solid fa-house menu-icon"></i></a>
+      			<a class="home-icon" href="Profil.php"><i class="fa-solid fa-house menu-icon"></i></a>
 			<a class="texte-connexion" href="connexion.php"><i class="fa-solid fa-right-to-bracket menu-icon"></i>Se connecter</a>
-        	<a class="texte-inscription" href="inscription.php"><i class="fa-solid fa-user-plus menu-icon"></i>Sinscrire</a>
-        </span>
+        		<a class="texte-inscription" href="inscription.php"><i class="fa-solid fa-user-plus menu-icon"></i>Sinscrire</a>
+        	</span>
+        	<img class="logo" src="logo.png" alt="logo"/>
+	</div>
     <?php
     }
 	else{
-	?>	
-		<span id="login">
+    ?>
+    <div class="filtre">	
+	<span id="login">
       		<a class="home-icon" href="Profil.php"><i class="fa-solid fa-house menu-icon"></i></a>
-			<?php
+		<?php
 			echo $utilisateur;
-			?>
+		?>
         </span>
-	<?php
+	<img class="logo" src="logo.png" alt="logo"/>
+   </div>
+<?php
 	}
 }
 ?>
