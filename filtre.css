@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url('background/IMG_0750.jpg'); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+}
+
+.texteAccueil{
+    width: 150px;
+    height: 90px;
+    left: 190px;
+    color: #b84a28;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color : white;
+    padding:0px 16px 4px 8px;
+    border-radius : 30px;
+    width : fit-content;
+    height : 30px;
+    font-size : 16px;
+    box-shadow : 0 0 10px rgba(0,0,0,0.3);
+    align-items : center;
+    justify-content : center;
+}
+
+.texte-recherche{
+    width: 150px;
+    height: 90px;
+    left: 190px;
+    color: #b84a28;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color : white;
+    padding:0px 16px 4px 8px;
+    border-radius : 30px;
+    width : fit-content;
+    height : 30px;
+    font-size : 16px;
+    box-shadow : 0 0 10px rgba(0,0,0,0.3);
+    align-items : center;
+    justify-content : center;
+}
+
+.texteVoyage{
+    width: 150px;
+    height: 90px;
+    left: 350px;
+    top: 22px;
+    color: #b84a28;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color : white;
+    padding:0px 16px 4px 8px;
+    border-radius : 30px;
+    width : fit-content;
+    height : 30px;
+    font-size : 16px;
+    box-shadow : 0 0 10px rgba(0,0,0,0.3);
+    align-items : center;
+    justify-content : center;
+}
+
+#login {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    background-color: #b84a28;
+    padding: 22px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+a:hover{
+	text-decoration : underline ;
+}
+
+.logo {
+    width: 150px;
+    height: 90px;
+    left: 9px;
+    top: -11px;
+    position: fixed;
+}
+
+.texte-connexion{
+    color: #b84a28;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 15px;
+    background-color : white;
+    border-radius : 30px;
+    width : 155px;
+    height : 30px;
+    font-size : 16px;
+    box-shadow : 0 0 10px rgba(0,0,0,0.3);
+    align-items : center;
+    justify-content : center;
+}
+
+.texte-inscription{
+    color: #b84a28;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 15px;
+    background-color : white;
+    border-radius : 30px;
+    width : 130px;
+    height : 30px;
+    font-size : 16px;
+    box-shadow : 0 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-icon{
+  margin : 0 10px;
+}
+
+.user-icon{
+  color : #602715;
+  font-size : 16px;
+  margin-right : 15px;
+}
+
+
+.filtre .contenu {
+    min-height: 51vh;
+    max-width : 600px;
+    margin : 0 auto 20px;
+    margin-top : 90px;
+    background : white;
+    padding : 20px;
+    border-radius : 10px;
+    box-shadow : 0 0 10px rgba(0, 0, 0, 0.8);
+    
+}
+
+.filtre h2 {
+    text-align: center;
+    color: #333;
+}
+
+.filtre label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.filtre input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  
+}
+
+.filtre button {
+    background-color: #b84a28;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.filtre button:hover {
+    background-color: #a74425;
+}
+
+.filtre h3  {
+    margin-top: 20px;
+    color: #333;
+}
+
+.filtre .Resultat {
+    background: #FFF;
+    padding: 10px;
+    border-left: 5px solid #b84a28;
+    margin-top: 10px;
+    border-radius: 5px;
+   
+}
+
+
+
+.Resultat {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+.trek-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.info {
+    flex: 1;
+}
+
+.details {
+    display: inline-block;
+    margin-top: 5px;
+    color: #b84a28;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.details:hover {		
+    color: #b84a28;
+    text-decoration: underline;
+}
+
+
+footer {
+    position: fixed;
+    display: flex;
+    align-items: left;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    width: 100%;
+    font-size: 13px; 
+}
+

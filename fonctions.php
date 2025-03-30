@@ -104,22 +104,23 @@ function bandeau($utilisateur){
         
         	<a class="texteVoyage" href="inscription.html"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
         	<a class="texte-recherche" href="inscription.html"><i class="fa-solid fa-camera"></i>  Recherche</a>
-      		<a class="home-icon" href="Profil.php"><i class="fa-solid fa-house menu-icon"></i></a>
+      		<a class="user-icon" href="Profil.php"><i class="fa-solid fa-user menu-icon"></i></a>
 			<a class="texte-connexion" href="connexion.php"><i class="fa-solid fa-right-to-bracket menu-icon"></i>Se connecter</a>
         	<a class="texte-inscription" href="inscription.php"><i class="fa-solid fa-user-plus menu-icon"></i>Sinscrire</a>
-        </span>
+        
+	</span>
         <img class="logo" src="logo.png" alt="logo" />
         <?php
     }
 	else{
 	?>	
 		<span id="login">
-      		<div
+      		
       		<a class="texteAccueil" href="inscription.html"><i class="fa-solid fa-house"></i> Accueil</a>
         
         	<a class="texteVoyage" href="inscription.html"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
         	<a class="texte-recherche" href="inscription.html"><i class="fa-solid fa-camera"></i>  Recherche</a>
-      		<a class="home-icon" href="Profil.php"><i class="fa-solid fa-house menu-icon"></i></a>
+      		<a class="user-icon" href="Profil.php"><i class="fa-solid fa-user menu-icon"></i></a>
 			<?php
 			echo $utilisateur;
 			?>
