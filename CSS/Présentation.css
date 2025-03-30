@@ -188,7 +188,7 @@ a{
 }
 
 a:hover{
- color : #b84a28;
+  text-decoration : underline;
 }
 
 .contact{
