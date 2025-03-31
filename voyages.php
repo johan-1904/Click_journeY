@@ -1,10 +1,18 @@
+<?php
+	require('fonctions.php');
+	session_start();
+	bandeau($_SESSION["prenom"]);
+	
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>Nos voyages</title>
-   <link rel="stylesheet" href="CSS/voyages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/voyages.css">
+    <link rel="stylesheet" href="CSS/Bandeau.css">
 </head>
 <body>
     <div class="image-texte">
