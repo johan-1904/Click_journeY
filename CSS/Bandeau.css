@@ -6,7 +6,16 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.flex-navabr{
+    display: flex;
+    position: fixed;
+    top: 22px;
+    left: 220px;
+    z-index: 1000;
+    gap : 20px;
 
+
+}
 .texteAccueil{
     width: 150px;
     height: 90px;
