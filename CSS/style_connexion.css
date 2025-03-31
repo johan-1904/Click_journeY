@@ -1,0 +1,49 @@
+ 
+.connexion form{
+  display : flex;
+  flex-direction : column;
+  background-color : white;
+  padding : 25px;
+  border-radius : 6px;
+  box-shadow : 0 0 10px rgba(0,0,0,0.3);
+}
+
+.connexion h4{
+  font-size : 20px;
+  text-align : center;
+}
+
+.connexion hr{
+  margin : 15px 0;
+  background-color : grey;
+  height : 1px;
+  width : 100%;
+  border : 0;
+}
+
+.connexion label{
+  display : flex;
+  margin-bottom : 6px;
+}
+
+.connexion input{
+  margin-bottom : 15px;
+  padding : 3px;
+  outline : 0;
+  border : 1px solid rgba(0,0,0,0.3);
+  border-radius : 10px
+}
+
+.connexion .submit-button{
+  margin-top : 7px;
+  background-color : #b84a28;
+  color : white;
+  cursor : pointer;
+  transition-duration : 0.3s;
+}
+
+.connexion p{
+  text-align : center;
+  font-size : 10px;
+  margin-top : 5px;
+}

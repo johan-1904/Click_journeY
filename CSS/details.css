@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;    
+}
+
+.ligne {
+	width : 40%;
+	height : 1px;
+	background-color : #958f8e;
+	margin : 10px 0;
+}
+
+.description {
+	width : 65%;
+	color : #958f8e;
+}
+
+
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+h2 {
+	margin : 10px 0;
+}
+
+
+
+strong {
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    line-height: 40px;
+    transition: background-color 0.3s;
+}
+
+.nav-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-button:hover {
+    background-color: #ccc;
+}
+
+.etape {
+	margin : 10px 20px;
+
+}
+
+button {
+	border : none;
+	font-size : 15px;
+	text-decoration : none;	
+}
+
+.titre_etape{
+	margin-left : 10px;
+
+
+}
+
+input {
+	border-radius : 9px;
+	text-decoration : 0;
+	margin: 20px 20px;
+	border-width: 2px;
+	padding : 10px;
+
+}
+
+input:hover{
+	text-decoration : underline;
+	color : #b84a28;
+	cursor : pointer;
+	border-color : #b84a28;
+	
+}
