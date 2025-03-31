@@ -1,5 +1,10 @@
 <?php
 
+function genererTransaction($min = 10, $max = 24) {
+    $longueur = rand($min, $max);
+    return substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, $longueur);
+}
+
 function est_admin($admin){
 	if($admin === 'oui'){
 		return TRUE;
