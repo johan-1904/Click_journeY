@@ -4,6 +4,8 @@
         "prenom": "johan",
         "email": "xyz@gmail.com",
         "password": "motdepasse",
+        "adresse": "",
+        "numero": "",
         "admin": "oui"
     },
     {
@@ -11,13 +13,17 @@
         "prenom": "aa",
         "email": "a@gmail.com",
         "password": "aaaa",
+        "adresse": "",
+        "numero": "",
         "admin": "non"
     },
     {
-        "nom": "aqouar",
-        "prenom": "ismael",
-        "email": "ismarretrop@gmail.com",
+        "nom": "BULTELLE",
+        "prenom": "antoine",
+        "email": "jbultelle@gmail.com",
         "password": "ismajej",
+        "adresse": "admin",
+        "numero": "000000000",
         "admin": "oui"
     },
     {
@@ -25,6 +31,8 @@
         "prenom": "Yves",
         "email": "ylegros@gmail.com",
         "password": "jesuisgros",
+        "adresse": "",
+        "numero": "",
         "admin": "non"
     },
     {
@@ -32,6 +40,8 @@
         "prenom": "L\u00e9on ",
         "email": "leonmarchand@gmail.com",
         "password": "l\u00e9onnatation",
+        "adresse": "",
+        "numero": "",
         "admin": "non"
     },
     {
@@ -39,6 +49,8 @@
         "prenom": "Teddy ",
         "email": "Tedriner@gmail.com",
         "password": "teddyjudo",
+        "adresse": "",
+        "numero": "",
         "admin": "non"
     },
     {
@@ -46,6 +58,8 @@
         "prenom": "F\u00e9lix",
         "email": "fefelebrun@gmail.com",
         "password": "felixping",
+        "adresse": "",
+        "numero": "",
         "admin": "non"
     },
     {
@@ -53,6 +67,8 @@
         "prenom": "Arthur",
         "email": "arthurfils@gmail.com",
         "password": "Arthurpere",
+        "adresse": "",
+        "numero": "",
         "admin": "non"
     },
     {
@@ -60,6 +76,8 @@
         "prenom": "Antoine",
         "email": "antdupont@gmail.com",
         "password": "antoinerugby",
+        "adresse": "",
+        "numero": "",
         "admin": "non"
     },
     {
@@ -67,6 +85,17 @@
         "prenom": "J\u00e9r\u00e9mie",
         "email": "jejbeauvais@gmail.com",
         "password": "jeremstar",
+        "adresse": "",
+        "numero": "",
+        "admin": "non"
+    },
+    {
+        "nom": "Halhoute",
+        "prenom": "Alexandre",
+        "email": "ismaqouar@gmail.com",
+        "password": "ismaquarium",
+        "adresse": "Belle \u00e9glise\r\n",
+        "numero": "000000000",
         "admin": "non"
     }
 ]
