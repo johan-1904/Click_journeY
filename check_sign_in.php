@@ -24,6 +24,8 @@ if($flag == true){
 		"prenom" => $_POST["prenom"],
 		"email" => $_POST["email"],
 		"password" => $_POST["password"],
+		"adresse" => "",
+		"numero" => "",
 		"admin" => "non"
 	];
 	file_put_contents('users_database.json', json_encode($users, JSON_PRETTY_PRINT));

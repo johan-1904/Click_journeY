@@ -31,44 +31,9 @@
 				<a href="logout.php" class="menu-link"><i class="fa-solid fa-right-from-bracket menu-icon"></i>Déconnexion</a>
 			</div>
 		</div>
-		<form class="account">
-			<div class="account-header">
-				<h1 class="account-title">Paramètres du compte</h1>
-				<div class="btn-container">
-					<button class="cancel-button">Annuler</button>
-					<button class="save-button">Enregistrer</button>
-				</div>
-			</div>
-		
-			<div class="account-edit">
-				<div class="input-container">
-					<label>Prénom</label>
-					<input type="text" placeholder="Prénom">
-				</div>
-				<div class="input-container">
-					<label>Nom</label>
-					<input type="text" placeholder="Nom">
-				</div>
-			</div>
-		
-			<div class="account-edit">
-				<div class="input-container">
-					<label>Email</label>
-					<input type="email" placeholder="xyz@gmail.com">
-				</div>
-				<div class="input-container">
-					<label>Numéro de téléphone</label>
-					<input type="text" placeholder="Numéro de téléphone">
-				</div>
-			</div>
-		
-			<div class="account-edit">
-				<div class="input-container">
-					<label>Adresse</label>
-					<textarea placeholder="Adresse"></textarea>
-				</div>
-			</div>	
-		</form>
+		<?php
+		afficher_paramètres($_SESSION["nom"], $_SESSION["prenom"], $_SESSION["email"], $_SESSION["numero"], $_SESSION["adresse"]);
+		?>
 	</div>
 <footer>
         <p>© 2025 DreamTrek - Profil</p>

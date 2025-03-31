@@ -17,7 +17,11 @@ if($flag == true){
 	foreach($users as $user){
 		if($user["email"] == $_SESSION["login"]){
 			$_SESSION["prenom"] = $user["prenom"];
+			$_SESSION["email"] = $user["email"];
 			$_SESSION["admin"] = $user["admin"];
+			$_SESSION["numero"] = $user["numero"];
+			$_SESSION["adresse"] = $user["adresse"];
+			$_SESSION["nom"] = $user["nom"];
 			break;
 		}
 	}

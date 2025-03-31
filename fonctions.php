@@ -23,7 +23,7 @@ function affiche_utilisateur(){
     		$page = 1;
 	}
 	
-	$utilisateurs_par_page = 6;
+	$utilisateurs_par_page = 10;
 	
 	$content=file_get_contents('users_database.json');
 	$users = json_decode($content, true);
@@ -100,10 +100,10 @@ function bandeau($utilisateur){
 	
 	?>
 		<span id="login">     	
-      		<a class="texteAccueil" href="inscription.html"><i class="fa-solid fa-house"></i> Accueil</a>
+      		<a class="texteAccueil" href="Présentation.php"><i class="fa-solid fa-house"></i> Accueil</a>
         
-        	<a class="texteVoyage" href="inscription.html"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
-        	<a class="texte-recherche" href="inscription.html"><i class="fa-solid fa-camera"></i>  Recherche</a>
+        	<a class="texteVoyage" href="voyages.php"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
+        	<a class="texte-recherche" href="filtre.php"><i class="fa-solid fa-camera"></i>  Recherche</a>
       		<a class="user-icon" href="Profil.php"><i class="fa-solid fa-user menu-icon"></i></a>
 			<a class="texte-connexion" href="connexion.php"><i class="fa-solid fa-right-to-bracket menu-icon"></i>Se connecter</a>
         	<a class="texte-inscription" href="inscription.php"><i class="fa-solid fa-user-plus menu-icon"></i>Sinscrire</a>
@@ -116,10 +116,10 @@ function bandeau($utilisateur){
 	?>	
 		<span id="login">
       		
-      		<a class="texteAccueil" href="inscription.html"><i class="fa-solid fa-house"></i> Accueil</a>
+      		<a class="texteAccueil" href="Présentation.php"><i class="fa-solid fa-house"></i> Accueil</a>
         
-        	<a class="texteVoyage" href="inscription.html"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
-        	<a class="texte-recherche" href="inscription.html"><i class="fa-solid fa-camera"></i>  Recherche</a>
+        	<a class="texteVoyage" href="voyages.php"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
+        	<a class="texte-recherche" href="filtre.php"><i class="fa-solid fa-camera"></i>  Recherche</a>
       		<a class="user-icon" href="Profil.php"><i class="fa-solid fa-user menu-icon"></i></a>
 			<?php
 			echo $utilisateur;
@@ -129,4 +129,54 @@ function bandeau($utilisateur){
 	<?php
 	}
 }
+
+function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 ?>
+		<form class="account" method="POST" action="Modif_informations.php">
+			<div class="account-header">
+				<h1 class="account-title">Paramètres du compte</h1>
+				<div class="btn-container">
+					<button class="cancel-button">Annuler</button>
+					<button class="save-button">Enregistrer</button>
+				</div>
+			</div>
+		
+			<div class="account-edit">
+				<div class="input-container">
+					<label>Prénom</label>
+					<input name="prenom" type="text" placeholder= <?php echo $prenom; ?>>
+				</div>
+				<div class="input-container">
+					<label>Nom</label>
+					<input name="nom" type="text" placeholder=<?php echo $nom; ?>>
+				</div>
+			</div>
+		
+			<div class="account-edit">
+				<div class="input-container">
+					<label>Email</label>
+					<input name="email" type="email" placeholder=<?php echo $email; ?>>
+				</div>
+				<div class="input-container">
+					<label>Numéro de téléphone</label>
+					<input name="numero" type="text" placeholder=<?php echo $numero; ?>>
+				</div>
+			</div>
+		
+			<div class="account-edit">
+				<div class="input-container">
+					<label>Adresse</label>
+					<textarea name="adresse" placeholder=<?php echo $adresse; ?>></textarea>
+				</div>
+			</div>	
+		</form>
+
+<?php
+}
+
+
+
+
+
+
+
