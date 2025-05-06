@@ -147,6 +147,21 @@ body{
  transition-duration : 0.3s;
 }
 
+.modif-button{
+ width : 500px;
+ height : 40px;
+ cursor : pointer;
+ border : 1px solid #b84a28;
+ margin-left : 5px;
+ background-color : #b84a28;
+ color : white;
+ font-weight : bold;
+ box-shadow : 0 0 10px rgba(0,0,0,0.2);
+ transition-duration : 0.3s;
+}
+
+
+
 .save-button:hover{
   background-color : #a74425;
 }
