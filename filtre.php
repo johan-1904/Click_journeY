@@ -16,7 +16,12 @@ $filtre_tarif = $_GET["tarif"] ?? "";
 
 
 function afficherTrek($trek) {
-    echo "<div class='Resultat'>";
+    echo "<div class='Resultat'
+    	data-nom'" . htmlspecialchars($trek["nom"]) ."'
+    	data-region'" . htmlspecialchars($trek["region"]) ."'
+    	data-date'" . htmlspecialchars($trek["date"]) ."'
+    	data-difficulte'" . htmlspecialchars($trek["difficulte"]) ."'
+    	data-tarif'" . htmlspecialchars($trek["tarif"]) ."'>";
     echo "<img src='" . htmlspecialchars($trek["image"]) . "' alt='Image du trek' class='trek-image'>";
     echo "<div class='info'>";
     echo "<strong>" . htmlspecialchars($trek["nom"]) . "</strong> - " . htmlspecialchars($trek["pays"]);
@@ -36,6 +41,7 @@ function afficherTrek($trek) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/filtre.css">
     <link rel="stylesheet" type="text/css" href="CSS/Bandeau.css">
+    <script src="java/tri.js"></script>
 </head>
 <body>
 	<?php
@@ -70,6 +76,14 @@ function afficherTrek($trek) {
 
         </form>
         
+        <label for="tri">Trier par :</label>
+        <select id ="tri">
+			<option value="">-- Aucun --</option>
+    		<option value="nom">ordre alphabétique</option>
+    		<option value="date">Date</option>
+    		<option value="tarif">Tarif (croissant)</option>
+		</select>
+
 
         <!-- Résultats filtrés -->
 
