@@ -182,10 +182,13 @@ function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 
 }
 
+
 function afficher_etape($id_voyage) {
+
     $content = file_get_contents('voyages.json');
     $voyages = json_decode($content, true);
     $etapes = null;
+   
 
     foreach ($voyages as $voyage) {
         if ($voyage["id"] == $id_voyage) {
@@ -193,15 +196,20 @@ function afficher_etape($id_voyage) {
             break;
         }
     }
+    $prix = htmlspecialchars($voyage["tarif"]);
 
     if ($etapes === null) {
         echo "<p>Aucune étape trouvée.</p>";
         return;
     }
     ?>
+    <script src="java/prix.js" type="text/javascript"> </script>
+    <input type="hidden" id="tarifBase" value="<?= floatval($prix) ?>">
     <form method="POST" action="paiement.php">
     <label for="nb_personnes">Nombre de personnes :</label>
-    <input type="number" id="nb_personnes" name="nb_personnes" value="1" min="1">
+    <input type="number" id="nb_personnes" name="nb_personnes" value="1" min="1" onchange ="mettreAJourPrix()">
+    <p>Prix total des options : <strong id="prixOptions">0.00 €</strong></p>
+    
 
     <h2 class="titre_etape">Étapes</h2>    
     <?php
@@ -217,10 +225,10 @@ function afficher_etape($id_voyage) {
                     <?php foreach ($etape["options"] as $option) { ?>
                         <li>
                             <label>
-                                <?php echo htmlspecialchars($option["nom"]); ?> - 
+                                <?php echo htmlspecialchars($option["nom"]); ?> 
                                 <?php echo htmlspecialchars($option["description"]); ?> 
-                                (Prix : <?php echo $option["tarif"]; ?>€)
-				<input type="checkbox" name="options[]" value="<?php echo $option["tarif"]; ?>">
+                                (Prix / pers : <?php echo $option["tarif"]; ?>€)
+				<input type="checkbox" name="options[]" value="<?= htmlspecialchars($option['tarif'])?>" onchange ="mettreAJourPrix()">
                             </label>
                         </li>
                     <?php } ?>
@@ -235,6 +243,7 @@ function afficher_etape($id_voyage) {
     </form>
 <?php
 }
+
 
 function genererTransaction($min = 10, $max = 24) {
     $longueur = rand($min, $max);
