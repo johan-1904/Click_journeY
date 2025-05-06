@@ -24,6 +24,7 @@ foreach ($data as $voyage) {
     <title><?= htmlspecialchars($detail['nom']); ?></title>
     <link rel="stylesheet" href="CSS/details.css">
     <link rel="stylesheet" href="CSS/Bandeau.css">
+    
 </head>
 <body>
     <?php 
@@ -44,7 +45,7 @@ foreach ($data as $voyage) {
             <p>Nombre d'étapes : <?= htmlspecialchars($detail['nb_etapes']); ?></p>
             <p>Durée : <?= htmlspecialchars($detail['duree']); ?></p>
             <p>Date : <?= htmlspecialchars($detail['date']); ?></p>
-            <p>Prix : <?= htmlspecialchars($detail['tarif']); ?> €</p>
+            <p>À partir de <?= htmlspecialchars($detail['tarif']); ?> €</p>
             <p>Moyen de transport : <?= htmlspecialchars($detail['transport']); ?></p>
         </section>
 	</div>
