@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
+  font-family : 'Poppins', sans-serif;
+}
+
+body{
+  background-color : #f8fafc;
+  background-image : url('background/dunesable.jpg');  
+  background-size : cover;
+  background-repeat : no-repeat;
+}
+
+
+.container{
+  display : flex;
+  margin : 50px 15px;
+}
+
+.profile{
+  flex : 1;
+  margin-right : 10px;
+  background-color : white;
+  box-shadow : 0 0 10px rgba(0,0,0,0.5);
+  border-radius : 30px;
+  height : max-content;
+  background : rgba(255,255,255,0.9);
+  
+}
+  
+.profile-header{
+  display : flex;
+  margin-left : 15px;
+  align-items : center;
+}
+
+.profile-img{
+  width : 150px;
+  height : 90px;
+  border-radius : 10px;
+  margin : 10px;
+  margin-bottom : 20px;
+}
+
+.profile-text-container{
+  line-height : 0.5;
+}
+
+.profile-title{
+  font-size : 20px;
+}
+ 
+.profile-email{
+  font-size : 14px;
+}
+
+.menu{
+  margin : 0 20px;
+}
+
+.menu-link{
+  display : block;
+  text-decoration : 0;
+  color : #768499;
+  padding : 10px;
+  margin : 10px;
+  border-radius : 10px;
+}
+
+.menu-icon{
+  margin-right : 10px;
+}
+
+.menu-link:first-child{
+  color : white;
+  background-color : #d45f3a;
+}
+.menu-link:first-child:hover{
+  color : #2b3f5e;
+}
+
+.menu-link:hover{
+  color : #273854;
+}
+
+.account{
+ flex : 2;
+ margin-left : 10px;
+ background-color : white;
+ box-shadow : 0 0 10px rgba(0,0,0,0.5);
+ border-radius : 6px;
+ height : 550px;
+ background : rgba(255,255,255,0.8);
+}
+  
+.account-header{
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+  padding : 10px;
+  border-bottom : 1px solid #a9a9a9;
+}
+
+.account-title{
+   font-size : 20px;
+   font-weight : 500;
+   margin-left : 10px;
+   color : #1e293b;
+}
+
+.btn-container{
+  margin-right : 5px;
+}
+
+.cancel-button{
+ width : 85px;
+ height : 40px;
+ cursor : pointer;
+ border-radius : 20px;
+ margin-right : 5px;
+ border : 1px solid #1e293b;
+ background-color : white;
+ font-weight : bold;
+ box-shadow : 0 0 10px rgba(0,0,0,0.2);
+ transition-duration : 0.3s;
+ }
+
+.cancel-button:hover{
+  background-color : #f1f5f9;
+  border : 1px solid #a74425;
+}
+
+.save-button{
+ width : 120px;
+ height : 40px;
+ cursor : pointer;
+ border-radius : 20px;
+ border : 1px solid #b84a28;
+ margin-left : 5px;
+ background-color : #b84a28;
+ color : white;
+ font-weight : bold;
+ box-shadow : 0 0 10px rgba(0,0,0,0.2);
+ transition-duration : 0.3s;
+}
+
+.modif-button{
+ width : 500px;
+ height : 40px;
+ cursor : pointer;
+ border : 1px solid #b84a28;
+ margin-left : 5px;
+ background-color : #b84a28;
+ color : white;
+ font-weight : bold;
+ box-shadow : 0 0 10px rgba(0,0,0,0.2);
+ transition-duration : 0.3s;
+}
+
+
+
+.save-button:hover{
+  background-color : #a74425;
+}
+
+.account-edit{
+  display : flex;
+  justify-content : space-between;
+  align-items : center;
+  margin : 15px 0;
+}
+
+.input-container{
+  width : 100%;
+  display : flex;
+  flex-direction : column; 
+  margin : 0 20px;
+}
+
+.input-container label{
+  margin : 5px 0;
+  font-size : 14px;
+  color : #768499;
+}
+
+.input-container input{
+  border-radius : 6px;
+  height : 40px;
+  border : 1px solid grey;
+  padding : 5px;
+  color : #768499;
+  margin-bottom : 40px;
+}
+
+.input-container input:focus{
+  outline : 0;
+  border : 1px solid #b84a28;
+}
+
+.input-container textarea{
+  display : block;
+  width : 100%;
+  height : 100px;
+  padding : 5px;
+  border : 1px solid #768499;
+  border-radius : 6px;
+  color : #768499;
+}
+
+.input-container textarea:focus{
+  outline : 0;
+  border : 1px solid #b84a28;
+}
+
+a{
+  text-decoration : 0;
+}
+
+footer {
+    position:absolute;
+    padding: 1px;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    width: 100%;
+    font-size: 13px; 
+
+
+}
