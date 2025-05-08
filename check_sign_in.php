@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-echo("HAHAHA");
 
 $content=file_get_contents('users_database.json');
 $users = json_decode($content, true);
@@ -10,15 +9,19 @@ $flag = false;
 
 
 foreach($users as $user){
-	echo("fzffze");
-	if($_POST["email"] === $user["email"]){
+		if($_POST["email"] === $user["email"]){
 		$flag = true;
 	}
 }
-if($flag == true){
-	header('LOCATION: inscription.php');
-	exit;
+
+if ($flag == true) {
+    echo "<script>
+        alert('Cette adresse mail est liée à un compte déjà existant');
+        window.location.href = 'inscription.php';
+    </script>";
+    exit;
 }
+
 	$users[] = [
 		"nom" => $_POST["nom"],
 		"prenom" => $_POST["prenom"],

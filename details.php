@@ -65,7 +65,7 @@ foreach ($data as $voyage) {
     echo "<p>Prix total des options sélectionnées : <strong>$total €</strong></p>";
 }
 	?>
-    
-
+	
+	
 </body>
 </html>

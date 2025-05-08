@@ -1,0 +1,16 @@
+[
+    {
+        "destination": "Maroc",
+        "email": "xyz@gmail.com",
+        "nb_personne": "2",
+        "prix": "15000",
+        "date_depart": "07\/07\/2025"
+    },
+    {
+        "destination": "Randonn\u00e9e dans les Gorges du Todra",
+        "email": "finaltest@gmail.com",
+        "nb_personne": "3",
+        "prix": "2286.00",
+        "date_depart": "2025-06-05"
+    }
+]

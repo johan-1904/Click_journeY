@@ -145,8 +145,7 @@ function bandeau($utilisateur){
 
 
 function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
-?>			<script src="java/Modif_informations.js" type="text/javascript"></script>
-			
+?>			<script src="java/Fonctions.js" type="text/javascript"></script>
 			<form id="modif_info" class="account" method="POST" action="Modif_informations.php">
 				<div class="account-header">
 					<h1 class="account-title">Paramètres du compte</h1>
@@ -184,11 +183,8 @@ function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 						<textarea name="adresse" placeholder="<?php echo $adresse; ?>"></textarea>
 					</div>
 				</div>	
-                       
 			</form>
- 			
-				
-		
+			<button id="modif_button" class="modif-button">Modifier</button>
 			<script>
 			Bouton();	
 			</script>
@@ -222,7 +218,14 @@ function afficher_etape($id_voyage) {
     ?>
     <script src="java/prix.js" type="text/javascript"> </script>
     <input type="hidden" id="tarifBase" value="<?= floatval($prix) ?>">
-    <form method="POST" action="paiement.php">
+    
+    <form method="POST" action="ajouter_panier.php">
+    <input type="hidden" name="destination" value="<?= htmlspecialchars($voyage['nom']) ?>">
+    <input type="hidden" name="date_depart" value="<?= htmlspecialchars($voyage['date']) ?>">
+    <input type="hidden" name="prix_total" id="prix_total_input">
+    <input type="hidden" name="email" value="<?= htmlspecialchars($_SESSION['email']) ?>">
+
+
     <label for="nb_personnes">Nombre de personnes :</label>
     <input type="number" id="nb_personnes" name="nb_personnes" value="1" min="1" onchange ="mettreAJourPrix()">
     <p>Prix total des options : <strong id="prixOptions">0.00 €</strong></p>
