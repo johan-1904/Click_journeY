@@ -5,7 +5,6 @@ require('fonctions.php');
 
 $json = file_get_contents("voyages.json");
 $treks = json_decode($json, true);
-
 $filtre_nom = $_GET["nom"] ?? "";
 $filtre_region = $_GET["region"] ?? "";
 $filtre_date = $_GET["date"] ?? "";
@@ -16,12 +15,12 @@ $filtre_tarif = $_GET["tarif"] ?? "";
 
 
 function afficherTrek($trek) {
-    echo "<div class='Resultat'
-    	data-nom'" . htmlspecialchars($trek["nom"]) ."'
-    	data-region'" . htmlspecialchars($trek["region"]) ."'
-    	data-date'" . htmlspecialchars($trek["date"]) ."'
-    	data-difficulte'" . htmlspecialchars($trek["difficulte"]) ."'
-    	data-tarif'" . htmlspecialchars($trek["tarif"]) ."'>";
+    echo "<div class='Resultat' id='trek-" . htmlspecialchars($trek["id"]) . "'
+    	data-nom='" . htmlspecialchars($trek["nom"]) ."'
+    	data-region='" . htmlspecialchars($trek["region"]) ."'
+    	data-date='" . htmlspecialchars($trek["date"]) ."'
+    	data-difficulte='" . htmlspecialchars($trek["difficulte"]) ."'
+    	data-tarif='" . htmlspecialchars($trek["tarif"]) ."'>";
     echo "<img src='" . htmlspecialchars($trek["image"]) . "' alt='Image du trek' class='trek-image'>";
     echo "<div class='info'>";
     echo "<strong>" . htmlspecialchars($trek["nom"]) . "</strong> - " . htmlspecialchars($trek["pays"]);
@@ -79,9 +78,10 @@ function afficherTrek($trek) {
         <label for="tri">Trier par :</label>
         <select id ="tri">
 			<option value="">-- Aucun --</option>
-    		<option value="nom">ordre alphabétique</option>
+    		<option value="nom">Ordre alphabétique</option>
     		<option value="date">Date</option>
-    		<option value="tarif">Tarif (croissant)</option>
+    		<option value="tarif">Tarif croissant</option>
+		<option value="tarifdecroiss">Tarif décroissant</option>
 		</select>
 
 
