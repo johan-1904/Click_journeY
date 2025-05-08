@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url('background/IMG_0750.jpg'); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  color: white; /* Texte en blanc pour un contraste avec le fond sombre */
+}
+
+/* Conteneur de paiement */
+.payer {
+    min-height: 51px;
+    width: 700px;
+    margin: 0 auto 20px;
+    margin-top: 90px;
+    background: rgba(0, 0, 0, 0.8); /* Fond sombre */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Bouton de paiement */
+.payer button {
+    background-color: #b84a28;
+    color: white;
+    border: none;
+    padding: 12px 25px; 
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.payer button:hover {
+    background-color: #a23d1b;
+}
+
+/* Pied de page */
+footer {
+    position: fixed;
+    display: flex;
+    align-items: left;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    width: 100%;
+    font-size: 13px; 
+    color: white; /* Texte du pied de page en blanc */
+}
