@@ -146,45 +146,47 @@ function bandeau($utilisateur){
 
 function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 ?>			<script src="java/Fonctions.js" type="text/javascript"></script>
-			<form id="modif_info" class="account" method="POST" action="Modif_informations.php">
-				<div class="account-header">
-					<h1 class="account-title">Paramètres du compte</h1>
-						<div class="btn-container">
-						<button id="annuler_button"type="button" class="cancel-button">Annuler</button>
-						<button class="save-button">Enregistrer</button>
+			<div class="modif-form">	
+				<form id="modif_info" class="account" method="POST" action="Modif_informations.php">
+					<div class="account-header">
+						<h1 class="account-title">Paramètres du compte</h1>
+							<div class="btn-container">
+							<button id="annuler_button"type="button" class="cancel-button">Annuler</button>
+							<button class="save-button">Enregistrer</button>
+							</div>
+					</div>
+		
+					<div class="account-edit">
+						<div class="input-container">
+							<label>Prénom</label>
+							<input name="prenom" type="text" placeholder= "<?php echo $prenom; ?>">
 						</div>
-				</div>
+						<div class="input-container">
+							<label>Nom</label>
+							<input name="nom" type="text" placeholder="<?php echo $nom; ?>">
+						</div>
+					</div>
 		
-				<div class="account-edit">
-					<div class="input-container">
-						<label>Prénom</label>
-						<input name="prenom" type="text" placeholder= "<?php echo $prenom; ?>">
+					<div class="account-edit">
+						<div class="input-container">
+							<label>Email</label>
+							<input name="email" type="email" placeholder="<?php echo $email; ?>">
+						</div>
+						<div class="input-container">
+							<label>Numéro de téléphone</label>
+							<input name="numero" type="text" placeholder="<?php echo $numero; ?>">
+						</div>
 					</div>
-					<div class="input-container">
-						<label>Nom</label>
-						<input name="nom" type="text" placeholder="<?php echo $nom; ?>">
-					</div>
-				</div>
 		
-				<div class="account-edit">
-					<div class="input-container">
-						<label>Email</label>
-						<input name="email" type="email" placeholder="<?php echo $email; ?>">
-					</div>
-					<div class="input-container">
-						<label>Numéro de téléphone</label>
-						<input name="numero" type="text" placeholder="<?php echo $numero; ?>">
-					</div>
-				</div>
-		
-				<div class="account-edit">
-					<div class="input-container">
-						<label>Adresse</label>
-						<textarea name="adresse" placeholder="<?php echo $adresse; ?>"></textarea>
-					</div>
-				</div>	
-			</form>
-			<button id="modif_button" class="modif-button">Modifier</button>
+					<div class="account-edit">
+						<div class="input-container">
+							<label>Adresse</label>
+							<textarea name="adresse" placeholder="<?php echo $adresse; ?>"></textarea>
+						</div>
+					</div>	
+				</form>
+				<button id="modif_button" class="modif-button">Modifier</button>
+			</div>
 			<script>
 			Bouton();	
 			</script>
