@@ -22,8 +22,8 @@ foreach ($data as $voyage) {
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title><?= htmlspecialchars($detail['nom']); ?></title>
-    <link rel="stylesheet" href="CSS/details.css">
     <link rel="stylesheet" href="CSS/Bandeau.css">
+    <link id="css" rel="stylesheet" href="CSS/details.css">
     
 </head>
 <body>
@@ -65,7 +65,8 @@ foreach ($data as $voyage) {
     echo "<p>Prix total des options sélectionnées : <strong>$total €</strong></p>";
 }
 	?>
-	
+	<script src="scipt.js"></script>
 	
 </body>
+
 </html>
