@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+session_start(); 
 $content=file_get_contents('users_database.json');
 $users = json_decode($content, true);
 
