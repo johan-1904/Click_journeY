@@ -142,3 +142,27 @@ a:hover{
   font-size : 16px;
   margin-right : 15px;
 }
+
+.theme-btn {
+    background-color: #ffffff;
+    color: #b84a28;
+    border: 2px solid #b84a28;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.theme-btn:hover {
+    background-color: #b84a28;
+    color: white;
+}
+.user-icon{
+  color : #602715;
+  font-size : 16px;
+  margin-right : 15px;
+}
