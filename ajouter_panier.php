@@ -24,7 +24,11 @@ $panier[] = $newItem;
 
 
 file_put_contents($fichier, json_encode($panier, JSON_PRETTY_PRINT));
+$destination = urlencode($_POST['destination']);
+$date_depart = urlencode($_POST['date_depart']);
+$nb_personnes = urlencode($_POST['nb_personnes']);
+$prix_total = urlencode($_POST['prix_total']);
 
-header("Location: paiement.php");
+header("Location: paiement.php?prix=$prix_total&destination=$destination&date_depart=$date_depart&nb_personnes=$nb_personnes");
 exit;
 ?>
