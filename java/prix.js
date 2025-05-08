@@ -1,4 +1,3 @@
-
 function mettreAJourPrix() {
     const tarifBase = parseFloat(document.getElementById("tarifBase").value) || 0;
     const nb = parseInt(document.getElementById("nb_personnes").value) || 1;
@@ -12,9 +11,11 @@ function mettreAJourPrix() {
 
     const totalFinal = (totalOptions + tarifBase) * nb;
     document.getElementById("prixOptions").textContent = totalFinal.toFixed(2) + " €";
+    document.getElementById("prix_total_input").value = totalFinal.toFixed(2);
  
 }
    window.addEventListener("DOMContentLoaded", mettreAJourPrix);
+   
 
 
 
