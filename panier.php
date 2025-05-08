@@ -28,8 +28,8 @@ function afficherTrek1($trek) { ?>
 <head>
     <title>TrekDream</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="CSS/panier.css">
     <link rel="stylesheet" type="text/css" href="CSS/Bandeau.css">
+    <link id="css" rel="stylesheet" type="text/css" href="CSS/panier.css">
 </head>
 <body>
 
@@ -48,5 +48,6 @@ function afficherTrek1($trek) { ?>
 <footer>
     <p>© 2025 DreamTrek - Panier</p>
 </footer>
+<script src="scipt.js"></script>
 </body>
 </html>
