@@ -121,3 +121,18 @@ input:hover{
 	border-color : #b84a28;
 	
 }
+button {
+    background-color: #ffffff; 
+    color: #ff9800;            
+    padding: 10px 20px;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9800; 
+    color: #ffffff;            
+    border-color: #ff9800;
+}
