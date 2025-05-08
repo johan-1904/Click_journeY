@@ -55,7 +55,7 @@ function affiche_utilisateur(){
                 	?>
                     <td>✅ Connecté</td>
                     <td>
-			<button class="ban-button" onclick="simulateBan(this)">Bannir</button>
+			<button class="ban-button" onclick="simulateBan(this)" data-etat="debanni">Bannir</button>
                     </td>
                 </tr>
                 <?php
@@ -146,6 +146,7 @@ function bandeau($utilisateur){
 
 function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 ?>			<script src="java/Modif_informations.js" type="text/javascript"></script>
+			
 			<form id="modif_info" class="account" method="POST" action="Modif_informations.php">
 				<div class="account-header">
 					<h1 class="account-title">Paramètres du compte</h1>
@@ -183,8 +184,11 @@ function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 						<textarea name="adresse" placeholder="<?php echo $adresse; ?>"></textarea>
 					</div>
 				</div>	
+                       
 			</form>
-			<button id="modif_button" class="modif-button">Modifier</button>
+ 			
+				
+		
 			<script>
 			Bouton();	
 			</script>
@@ -252,7 +256,7 @@ function afficher_etape($id_voyage) {
         <?php
     }
     ?>
-    <input type="submit" name="Valider" value="Valider mes choix">
+    <input type="submit" name="Valider" value="Ajouter au panier">
     </form>
 <?php
 }
