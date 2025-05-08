@@ -32,8 +32,8 @@ $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur .
 <head>
     <title>TrekDream</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="CSS/paiement.css">
     <link rel="stylesheet" type="text/css" href="CSS/Bandeau.css">
+    <link id="css" rel="stylesheet" type="text/css" href="CSS/paiement.css">
 </head>
 
 <body>	
@@ -61,5 +61,6 @@ $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur .
 <footer>
     <p>© 2025 DreamTrek - Searching Page</p>
 </footer>
+<script src="scipt.js"></script>
 </body>
 </html>
