@@ -9,6 +9,7 @@ function est_admin($admin){
 	}
 }
 
+
 function admin($admin){
 	if(est_admin($admin)){
 		?>
@@ -17,7 +18,9 @@ function admin($admin){
 	}
 }
 
+
 function affiche_utilisateur(){
+	
 	$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 	if ($page < 1) {
     		$page = 1;
@@ -52,7 +55,7 @@ function affiche_utilisateur(){
                 	?>
                     <td>✅ Connecté</td>
                     <td>
-                        <button class="ban">Bannir</button>
+			<button class="ban-button" onclick="simulateBan(this)">Bannir</button>
                     </td>
                 </tr>
                 <?php
@@ -78,6 +81,8 @@ function affiche_utilisateur(){
 	<?php
 }
 
+
+
 function est_connecte($utilisateur){
 
 	if(empty($utilisateur)){
@@ -88,11 +93,15 @@ function est_connecte($utilisateur){
 	}
 }
 
+
+
 function anonyme($utilisateur){
 	if(est_connecte($utilisateur)){
 		header('LOCATION: connexion.php');
 	}
 }
+
+
 
 function bandeau($utilisateur){
 	
@@ -132,6 +141,8 @@ function bandeau($utilisateur){
 	<?php
 	}
 }
+
+
 
 function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 ?>			<script src="java/Modif_informations.js" type="text/javascript"></script>
@@ -181,6 +192,8 @@ function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 <?php
 
 }
+
+
 
 
 function afficher_etape($id_voyage) {
