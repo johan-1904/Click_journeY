@@ -8,10 +8,11 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="CSS/Profil.css">
+	<link id="css" rel="stylesheet" type="text/css" href="CSS/profil.css">
 	<title>Mon compte</title>
 </head>
 <body>
+	<button id="theme-toggle" class="theme-btn">Mode sombre</button>
 	<div class="container">
 		<div class="profile">
 			<div class="profile-header">
@@ -39,6 +40,18 @@
 <footer>
         <p>© 2025 DreamTrek - Profil</p>
 </footer>
+<script>
+document.getElementById('theme-toggle').addEventListener('click', function() {
+    const link = document.getElementById('css');
+    if (link.getAttribute('href') === 'CSS/profil.css') {
+        link.setAttribute('href', 'CSS/ProfilDark.css');
+        this.textContent = 'Mode clair';
+    } else {
+        link.setAttribute('href', 'CSS/profil.css');
+        this.textContent = 'Mode sombre';
+    }
+});
+</script>
 </body>	
 </html>	 
 	
