@@ -1,11 +1,22 @@
 function simulateBan(button) {
-    button.style.backgroundColor = 'gray';
-    button.disabled = true;
+   const estBanni = button.dataset.etat === 'banni';
+
     button.textContent = 'En cours...';
+    button.disabled = true;
+    button.style.backgroundColor = 'gray';
 
     setTimeout(() => {
-        button.style.backgroundColor = 'red';
+        if (estBanni) {
+           
+            button.textContent = 'Bannir';
+            button.style.backgroundColor = 'red';
+            button.dataset.etat = 'debanni';
+        } else {
+           
+            button.textContent = 'Débannir';
+            button.style.backgroundColor = 'red';
+            button.dataset.etat = 'banni';
+        }
         button.disabled = false;
-        button.textContent = 'Bannir';
     }, 1000);
 }
