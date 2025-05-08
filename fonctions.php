@@ -104,42 +104,37 @@ function anonyme($utilisateur){
 
 
 function bandeau($utilisateur){
-	
-	if(est_connecte($utilisateur)){
-	
-	?>
-		<span id="login">  
-                <div class="flex-navabr">   	
-      		<a class="texteAccueil" href="Présentation.php"><i class="fa-solid fa-house"></i> Accueil</a>
-        
-        	<a class="texteVoyage" href="voyages.php"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
-        	<a class="texte-recherche" href="filtre.php"><i class="fa-solid fa-camera"></i>  Recherche</a>
-		</div>
-      		<a class="user-icon" href="Profil.php"><i class="fa-solid fa-user menu-icon"></i></a>
-			<a class="texte-connexion" href="connexion.php"><i class="fa-solid fa-right-to-bracket menu-icon"></i>Se connecter</a>
-        	<a class="texte-inscription" href="inscription.php"><i class="fa-solid fa-user-plus menu-icon"></i>Sinscrire</a>
-        
-	</span>
+    if(est_connecte($utilisateur)){
+        ?>
+        <span id="login">  
+            <div class="flex-navabr">   
+                <a class="texteAccueil" href="Présentation.php"><i class="fa-solid fa-house"></i> Accueil</a>
+                <a class="texteVoyage" href="voyages.php"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
+                <a class="texte-recherche" href="filtre.php"><i class="fa-solid fa-camera"></i> Recherche</a>
+            </div>
+            <a class="user-icon" href="Profil.php"><i class="fa-solid fa-user menu-icon"></i></a>
+            <a class="texte-connexion" href="connexion.php"><i class="fa-solid fa-right-to-bracket menu-icon"></i>Se connecter</a>
+            <a class="texte-inscription" href="inscription.php"><i class="fa-solid fa-user-plus menu-icon"></i>S'inscrire</a>
+        </span>
+        <img class="logo" src="logo.png" alt="logo" />
+        <?php
+    } else {
+        ?> 
+        <span id="login">
+            <div class="flex-navabr">
+                <a class="texteAccueil" href="Présentation.php"><i class="fa-solid fa-house"></i> Accueil</a>
+                <a class="texteVoyage" href="voyages.php"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
+                <a class="texte-recherche" href="filtre.php"><i class="fa-solid fa-camera"></i> Recherche</a>
+            </div>      
+            <a class="user-icon" href="Profil.php"><i class="fa-solid fa-user menu-icon"></i></a>
+            <?php echo $utilisateur; ?>
+			<button id="theme-toggle" class="theme-btn">
+    			Mode sombre
+			</button>
+        </span>
         <img class="logo" src="logo.png" alt="logo" />
         <?php
     }
-	else{
-	?> 	
-		<span id="login">
-      		<div class="flex-navabr">
-      		<a class="texteAccueil" href="Présentation.php"><i class="fa-solid fa-house"></i> Accueil</a>
-        
-        	<a class="texteVoyage" href="voyages.php"><i class="fa-brands fa-avianex"></i> Nos voyages </a>
-        	<a class="texte-recherche" href="filtre.php"><i class="fa-solid fa-camera"></i>  Recherche</a>
-		</div>      		
-                <a class="user-icon" href="Profil.php"><i class="fa-solid fa-user menu-icon"></i></a>
-			<?php
-			echo $utilisateur;
-			?>
-		<img class="logo" src="logo.png" alt="logo" />
-        	</span>
-	<?php
-	}
 }
 
 
