@@ -1,3 +1,32 @@
+<?php
+session_start();
+require('fonctions.php');
+anonyme($_SESSION["prenom"]);
+bandeau($_SESSION["prenom"]);
+	
+$voyage =  $_GET["voyage_actuel"] ??  "inconnu";
+$destination = $_POST["nom"] ?? "inconnu";
+$date = $_POST["date"] ?? "inconnue";
+$prix = $_GET["prix"] ?? 0;
+$nb_personnes = $_GET["nb_personnes"] ?? 0;
+
+
+
+
+include('getapikey.php');
+$transaction =  genererTransaction(10, 24);
+$montant = 1645;
+$vendeur = 'MI-1_C';
+$retour = 'http://localhost/mon_projet/retour.php';
+$api_key = getAPIKey($vendeur);
+
+
+$control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
