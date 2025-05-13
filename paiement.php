@@ -4,11 +4,11 @@ require('fonctions.php');
 anonyme($_SESSION["prenom"]);
 bandeau($_SESSION["prenom"]);
 	
-$voyage =  $_GET["voyage_actuel"] ??  "inconnu";
-$destination = $_GET["destination"] ?? "inconnu";
-$date = $_GET["date_depart"] ?? "inconnue";
-$prix = $_GET["prix"] ?? 0;
-$nb_personnes = $_GET["nb_personnes"] ?? 0;
+$voyage =  $_POST["voyage_actuel"] ??  "inconnu";
+$destination = $_POST["destination"] ?? "inconnu";
+$date = $_POST["date_depart"] ?? "inconnue";
+$prix = $_POST["prix"] ?? 0;
+$nb_personnes = $_POST["nb_personnes"] ?? 0;
 
 
 
@@ -17,7 +17,7 @@ include('getapikey.php');
 $transaction =  genererTransaction(10, 24);
 $montant = $prix;
 $vendeur = 'MI-1_C';
-$retour = 'http://localhost/mon_projet/retour.php';
+$retour = 'http://localhost:5454/retour.php';
 $api_key = getAPIKey($vendeur);
 
 

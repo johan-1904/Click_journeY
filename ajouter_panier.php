@@ -24,11 +24,20 @@ $panier[] = $newItem;
 
 
 file_put_contents($fichier, json_encode($panier, JSON_PRETTY_PRINT));
-$destination = urlencode($_POST['destination']);
-$date_depart = urlencode($_POST['date_depart']);
-$nb_personnes = urlencode($_POST['nb_personnes']);
-$prix_total = urlencode($_POST['prix_total']);
-
-header("Location: paiement.php?prix=$prix_total&destination=$destination&date_depart=$date_depart&nb_personnes=$nb_personnes");
+$destination =$_POST['destination'];
+$date_depart = $_POST['date_depart'];
+$nb_personnes = $_POST['nb_personnes'];
+$prix_total = $_POST['prix_total'];
+?>
+<br><form id="redirection" action="paiement.php" method="POST">
+  		  <input type="hidden" name="prix" value="<?= $prix_total ?>">
+ 		  <input type="hidden" name="destination" value="<?= $destination ?>">
+  		  <input type="hidden" name="date_depart" value="<?= $date_depart ?>">
+   		  <input type="hidden" name="nb_personnes" value="<?= $nb_personnes ?>">
+	</form>
+	<script>
+        document.getElementById('redirection').submit();
+    	</script>
+<?	
 exit;
 ?>

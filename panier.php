@@ -7,14 +7,25 @@ $paniers = json_decode($json1, true);
 
 
 
-function afficherTrek1($trek) { ?>
+function afficherTrek1($trek) {
+    $destination = $trek["destination"];
+    $date_depart = $trek["date_depart"];
+    $nb_personnes =$trek["nb_personne"];
+    $prix_total = $trek["prix"]; ?>
     <div class='Resultat' id='trek-<?= htmlspecialchars($trek["id"]) ?>'>
         <div class='info'>
             <strong><?= htmlspecialchars($trek["destination"]) ?></strong>
             - <?= htmlspecialchars($trek["date_depart"]) ?> - Nombre de personne: <?= htmlspecialchars($trek["nb_personne"]) ?>
             - Prix: <?= htmlspecialchars($trek["prix"]) ?>€
             <br><a href=# class='details'>Supprimer</a>
-            <br><a href="paiement.php?prix=<?= urlencode($trek['prix']) ?>" class='details'>Passer au paiement</a>
+          <br><form action="paiement.php" method="POST">
+  		  <input type="hidden" name="prix" value="<?= $prix_total ?>">
+ 		  <input type="hidden" name="destination" value="<?= $destination ?>">
+  		  <input type="hidden" name="date_depart" value="<?= $date_depart ?>">
+   		  <input type="hidden" name="nb_personnes" value="<?= $nb_personnes ?>">
+                 <button type="submit" class="details">Passer au paiement</button>
+	</form>
+
 
 
         </div>

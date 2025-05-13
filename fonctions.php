@@ -206,6 +206,7 @@ function afficher_etape($id_voyage) {
             break;
         }
     }
+    
     $prix = htmlspecialchars($voyage["tarif"]);
 
     if ($etapes === null) {
