@@ -82,10 +82,11 @@ a:hover{
 }
 
 .details {
+    border: none;
     display: inline-block;
     margin-top: 5px;
     color: #b84a28;
-    text-decoration: none;
+    background-color:#f9f9f9;
     font-weight: bold;
 }
 
