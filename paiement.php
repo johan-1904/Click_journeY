@@ -9,6 +9,7 @@ $destination = $_POST["destination"] ?? "inconnu";
 $date = $_POST["date_depart"] ?? "inconnue";
 $prix = $_POST["prix"] ?? 0;
 $nb_personnes = $_POST["nb_personnes"] ?? 0;
+$option = $_POST["nom_option"] ?? "inconnu";
 
 
 
@@ -41,9 +42,18 @@ $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur .
 		<h1>Récapitulatif de votre voyage </h2><br>
 		<p><strong>Merci de bien vérifier les informations ci-dessous.</strong></p><br>
        	 	<p><strong>Destination :</strong> <?= htmlspecialchars($destination) ?></p>
+       	 	<?php 
+       	 	if(empty($option)){
+       	 			echo "<p><strong>Options sélectionnées :</strong> Aucune option séléctionnée</p>";
+       	 		else{
+       	 	echo "<p><strong>Options sélectionnées :</strong> " . htmlspecialchars($option) . "</p>";
+       	 	}
+       	 	?>
 		<p><strong>Date de départ :</strong> <?= htmlspecialchars($date) ?></p>
 		<p><strong>Nombre de personnes :</strong> <?= htmlspecialchars($nb_personnes) ?></p>
 		<p><strong>Numéro de transaction :</strong> <?= $transaction ?></p>
+		
+		
 		
         	<p><strong>Total :</strong> <?= number_format($montant, 2, ',', ' ') ?> €</p>
 		
