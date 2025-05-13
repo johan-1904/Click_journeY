@@ -1,20 +1,42 @@
-function Bouton(){
-
+function Bouton() {
 	const formulaire = document.getElementById('modif_info');
 	const boutonModifier = document.getElementById('modif_button');
 	const boutonAnnuler = document.getElementById('annuler_button');
+	const boutonEnregistrer = document.getElementById('enregistrer_button');
+
+	// Sauvegarde des valeurs initiales
+	const valeursInitiales = {};
 	Array.from(formulaire.elements).forEach(element => {
+		if (element.name) {
+			valeursInitiales[element.name] = element.value;
+		}
 		element.disabled = true;
 	});
+
+	// Clic sur "Modifier"
 	boutonModifier.addEventListener('click', () => {
-	   	Array.from(formulaire.elements).forEach(element => {
-	     		element.disabled = false;
-	     	});
+		Array.from(formulaire.elements).forEach(element => {
+			element.disabled = false;
+		});
+		boutonAnnuler.style.display = 'inline-block';
+		boutonEnregistrer.style.display = 'inline-block';
+		boutonModifier.style.display = 'none';
 	});
+
+	// Clic sur "Annuler" (réinitialise sans recharger la page)
 	boutonAnnuler.addEventListener('click', () => {
-		location.reload();
+		Array.from(formulaire.elements).forEach(element => {
+			if (element.name && valeursInitiales[element.name] !== undefined) {
+				element.value = valeursInitiales[element.name];
+			}
+			element.disabled = true;
+		});
+		boutonAnnuler.style.display = 'none';
+		boutonEnregistrer.style.display = 'none';
+		boutonModifier.style.display = 'inline-block';
 	});
 }
+
 
 function Verif_informations_inscription(){
 
