@@ -1,7 +1,7 @@
 function mettreAJourPrix() {
     const tarifBase = parseFloat(document.getElementById("tarifBase").value) || 0;
     const nb = parseInt(document.getElementById("nb_personnes").value) || 1;
-    const checkboxes = document.querySelectorAll('input[name="options[]"]:checked');
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
      let totalOptions = 0;
    
 

@@ -9,12 +9,12 @@ function simulateBan(button) {
         if (estBanni) {
            
             button.textContent = 'Bannir';
-            button.style.backgroundColor = 'red';
+            button.style.backgroundColor = '#ff4444';
             button.dataset.etat = 'debanni';
         } else {
            
             button.textContent = 'Débannir';
-            button.style.backgroundColor = 'red';
+            button.style.backgroundColor = '#ff4444';
             button.dataset.etat = 'banni';
         }
         button.disabled = false;
