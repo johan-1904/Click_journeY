@@ -98,6 +98,7 @@ body {
   border-radius: 6px;
   height: 550px;
   background: rgba(44, 44, 58, 0.9);
+  padding : 25px;
 }
 
 .account-header {
@@ -117,6 +118,21 @@ body {
 
 .btn-container {
   margin-right: 5px;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: #b84a28;
+  border: 2px solid #b84a28;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .cancel-button {
@@ -188,15 +204,26 @@ margin-left : 260px;
   color: #cbd5e1;
 }
 
-.input-container input,
-.input-container textarea {
-  border-radius: 6px;
-  border: 1px solid #475569;
-  padding: 5px;
+.input-container input{
+  border-radius : 6px;
+  height : 40px;
+  border : 1px solid grey;
+  padding : 5px;
+  color : white;
+  margin-bottom : 40px;
   background-color: #1e293b;
-  color: #e2e8f0;
-  margin-bottom: 40px;
 }
+
+.input-container textarea{
+
+  width : 100%;
+  height : 100px;
+  padding : 5px;
+  border : 1px solid #768499;
+  border-radius : 6px;
+  color : white;
+  background-color: #1e293b;
+}	
 
 .input-container input:focus,
 .input-container textarea:focus {
