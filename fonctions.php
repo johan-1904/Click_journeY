@@ -146,9 +146,10 @@ function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 					<div class="account-header">
 						<h1 class="account-title">Paramètres du compte</h1>
 							<div class="btn-container">
-							<button id="annuler_button"type="button" class="cancel-button">Annuler</button>
-							<button class="save-button">Enregistrer</button>
+    								<button id="annuler_button" type="button" class="cancel-button" style="display: none;">Annuler</button>
+   								<button id="enregistrer_button" type="submit" class="save-button" style="display: none;">Enregistrer</button>
 							</div>
+
 					</div>
 		
 					<div class="account-edit">
@@ -169,7 +170,9 @@ function afficher_paramètres($nom, $prenom, $email, $numero, $adresse){
 						</div>
 						<div class="input-container">
 							<label>Numéro de téléphone</label>
-							<input name="numero" type="text" placeholder="<?php echo $numero; ?>">
+							<input id="champ-numero" name="numero" type="text" maxlength="10" placeholder="<?php echo $numero; ?>">
+<span id="erreur-numero" style="color:red; display:none;"></span>
+
 						</div>
 					</div>
 		
