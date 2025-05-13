@@ -1,10 +1,10 @@
 <?php
 session_start();
-
-
 if (!isset($_POST['destination'], $_POST['email'], $_POST['prix_total'], $_POST['date_depart'], $_POST['nb_personnes'])) {
     die("Données manquantes.");
 }
+$ids_options = [];
+$nom_option =[];
 foreach($_POST as $k => $v){
     if(preg_match('/^\d+-\d+-\d+$/', $k)) {
         $ids_options[] = $k;
@@ -20,7 +20,8 @@ $newItem = [
     "email" => $_POST['email'],
     "nb_personne" => $_POST['nb_personnes'],
     "prix" => $_POST['prix_total'],
-    "date_depart" => $_POST['date_depart']
+    "date_depart" => $_POST['date_depart'],
+    "options" => []
     
 ];
 
@@ -29,10 +30,6 @@ $fichier = 'panier.json';
 $panier = file_exists($fichier) ? json_decode(file_get_contents($fichier), true) : [];
 
 
-$panier[] = $newItem;
-
-
-file_put_contents($fichier, json_encode($panier, JSON_PRETTY_PRINT));
 $destination =$_POST['destination'];
 $date_depart = $_POST['date_depart'];
 $nb_personnes = $_POST['nb_personnes'];
@@ -45,16 +42,20 @@ foreach($treks as $voyage){
 	if($destination == $voyage["nom"]){
 		foreach($voyage["etapes"] as $etape){
 			foreach($etape["options"] as $option){
-				$id_option = $voyage["id"] . '-' . $etape["id"] . '-' . $option["id"];
+				$id_option =$option["id"];
                 		if (in_array($id_option, $ids_options)) {
                 			$nom_option[]=$option["nom"];
+					$newItem['options'][] = $option["nom"];
                 		}
                 	}
                 }
         }
 }		
-$options_str = implode(',', $nom_option);	
-	
+$options_str = implode(', ', $nom_option);
+$panier[] = $newItem;
+
+file_put_contents($fichier, json_encode($panier, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
 ?>
 <br><form id="redirection" action="paiement.php" method="POST">
   		  <input type="hidden" name="prix" value="<?= $prix_total ?>">

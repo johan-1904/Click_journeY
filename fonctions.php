@@ -55,7 +55,7 @@ function affiche_utilisateur(){
                 	?>
                     <td>✅ Connecté</td>
                     <td>
-			<button class="ban-button" onclick="simulateBan(this)" data-etat="debanni">Bannir</button>
+			<button class="ban" onclick="simulateBan(this)" data-etat="debanni">Bannir</button>
                     </td>
                 </tr>
                 <?php
@@ -249,7 +249,7 @@ function afficher_etape($id_voyage) {
                                 <?php echo htmlspecialchars($option["nom"]); ?> 
                                 <?php echo htmlspecialchars($option["description"]); ?> 
                                 (Prix / pers : <?php echo $option["tarif"]; ?>€)
-				<input type="checkbox" name="options[]" value="<?= htmlspecialchars($option['tarif'])?>" onchange ="mettreAJourPrix()">
+				<input type="checkbox" name="<?= htmlspecialchars($option['id']) ?>" value="<?= htmlspecialchars($option['tarif'])?>" onchange ="mettreAJourPrix()">
                             </label>
                         </li>
                     <?php } ?>

@@ -39,14 +39,15 @@ $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur .
 
 <body>	
 	<div class="payer">
-		<h1>Récapitulatif de votre voyage </h2><br>
+		<h1>Récapitulatif de votre voyage </h1><br>
 		<p><strong>Merci de bien vérifier les informations ci-dessous.</strong></p><br>
        	 	<p><strong>Destination :</strong> <?= htmlspecialchars($destination) ?></p>
        	 	<?php 
        	 	if(empty($option)){
        	 			echo "<p><strong>Options sélectionnées :</strong> Aucune option séléctionnée</p>";
-       	 		else{
-       	 	echo "<p><strong>Options sélectionnées :</strong> " . htmlspecialchars($option) . "</p>";
+		}
+       	 	else{
+       	 		echo "<p><strong>Options sélectionnées :</strong> " . htmlspecialchars($option) . "</p>";
        	 	}
        	 	?>
 		<p><strong>Date de départ :</strong> <?= htmlspecialchars($date) ?></p>
