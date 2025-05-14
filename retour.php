@@ -10,6 +10,10 @@ $transaction = $_GET["transaction"] ?? "non spécifiée";
 $montant = $_GET["montant"] ?? "inconnu";
 
 
+	$content=file_get_contents('panier.json');
+	$paniers = json_decode(file_get_contents('panier.json'), true);
+	$historiques = json_decode(file_get_contents('historique.json'), true);
+
 
 function est_accepte($statut){
 	if ($statut === "denied") {	
@@ -35,12 +39,33 @@ function est_accepte($statut){
 </head>
 <body>
 	<div class="test">
-        	<?php if (est_accepte($statut)): ?>
+        <?php 
+		if (est_accepte($statut)): ?>
            		<h2>Paiement confirmé ✅</h2>
             		<p><strong>Voyage :</strong> <?= htmlspecialchars($voyage) ?></p>
-            		<p><strong>Numéro de transaction :</strong> <?= htmlspecialchars($transaction) ?></p>
+			<p><strong>Numéro de transaction :</strong> <?= htmlspecialchars($transaction) ?></p>
             		<p><strong>Montant payé :</strong> <?= number_format((float)$montant, 2, ',', ' ') ?> €</p>
             		<p>Merci pour votre achat ! Vous recevrez bientôt une confirmation par e-mail.</p>
+			<?php
+			foreach($paniers as $historique){
+				if($historique["transaction"]==$transaction){		
+					$historiques[] = [
+
+   						"destination" => $historique['destination'],
+   						"email" => $historique['email'],
+    						"nb_personne" => $historique['nb_personne'],
+    						"prix" => $historique['prix'],
+    						"date_depart" => $historique['date_depart'],
+    						"options" => $historique['options'],
+						"transaction" =>$historique['transaction']
+
+    					];
+
+				break;
+				}
+			}
+			file_put_contents('historique.json', json_encode($historiques, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+			?>
        		<?php else: ?>
             		<h2>Paiement échoué </h2>
             		<p>Votre transaction a été refusée par l'opérateur bancaire.</p>

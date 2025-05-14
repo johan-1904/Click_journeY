@@ -1,5 +1,28 @@
 <?php
 
+function ajouter_transaction($nom, $date, $prix, $nb_personne, $option, $email, $transaction){
+
+	
+	
+	$content=file_get_contents('panier.json');
+	$voyages = json_decode($content, true);
+	
+	foreach($voyages as &$voyage){
+		$options = implode(', ', $voyage["options"]);
+		print_r($options);
+		echo("bonjour");
+		if($voyage["destination"] == $nom && $voyage["date_depart"] == $date && $voyage["prix"] == $prix && $voyage["nb_personne"] == $nb_personne && $voyage["email"] == $email && $option == $options){
+			$voyage["transaction"] = $transaction;
+			break;
+		}							
+			
+	}
+	file_put_contents('panier.json', json_encode($voyages, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+}
+
+
+
 function est_admin($admin){
 	if($admin === 'oui'){
 		return TRUE;

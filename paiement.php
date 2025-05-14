@@ -3,6 +3,7 @@ session_start();
 require('fonctions.php');
 anonyme($_SESSION["prenom"]);
 bandeau($_SESSION["prenom"]);
+
 	
 $voyage =  $_POST["voyage_actuel"] ??  "inconnu";
 $destination = $_POST["destination"] ?? "inconnu";
@@ -18,12 +19,10 @@ include('getapikey.php');
 $transaction =  genererTransaction(10, 24);
 $montant = $prix;
 $vendeur = 'MI-1_C';
-$retour = 'http://localhost:5454/retour.php';
+$retour = 'http://localhost/mon_projet/retour.php';
 $api_key = getAPIKey($vendeur);
-
-
 $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
-
+ajouter_transaction($destination, $date, $prix, $nb_personnes, $option, $_SESSION["email"], $transaction); 
 
 ?>
 
@@ -68,6 +67,8 @@ $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur .
 			<button type="submit"> Valider et payer </button>
 			
 		</form>
+		
+		
 	</div>
 <footer>
     <p>© 2025 DreamTrek - Searching Page</p>

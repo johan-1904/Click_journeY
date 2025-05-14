@@ -21,7 +21,8 @@ $newItem = [
     "nb_personne" => $_POST['nb_personnes'],
     "prix" => $_POST['prix_total'],
     "date_depart" => $_POST['date_depart'],
-    "options" => []
+    "options" => [],
+    "transaction" => ""
     
 ];
 

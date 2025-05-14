@@ -1,21 +1,14 @@
 [
     {
-        "nom": "bultelle",
-        "prenom": "johan",
+        "destination": "Wadi Rum Aventure",
         "email": "xyz@gmail.com",
-        "password": "motdepasse",
-        "adresse": "",
-        "numero": "",
-        "admin": "oui"
-    },
-    {
-        "nom": "aa",
-        "prenom": "aa",
-        "email": "a@gmail.com",
-        "password": "aaaa",
-        "adresse": "",
-        "numero": "",
-        "admin": "non"
-    },
-    
+        "nb_personne": "1",
+        "prix": "790.00",
+        "date_depart": "2025-04-05",
+        "options": [
+            "Observation du lever du soleil",
+            "Petit-déjeuner bédouin"
+        ],
+        "transaction": "RPNCD407SU"
+    }
 ]
