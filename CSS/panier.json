@@ -1,0 +1,36 @@
+[
+    {
+        "destination": "Trek des Volcans d'Atacama",
+        "email": "xyz@gmail.com",
+        "nb_personne": "1",
+        "prix": "1200.00",
+        "date_depart": "2025-05-20",
+        "options": [],
+        "transaction": "ED07WJFIKOG89P3LT1XA5B4C"
+    },
+    {
+        "destination": "Randonnée dans les Gorges du Todra",
+        "email": "xyz@gmail.com",
+        "nb_personne": "1",
+        "prix": "752.00",
+        "date_depart": "2025-06-05",
+        "options": [
+            "Dîner sous tente berbère",
+            "Bain rafraîchissant dans une source naturelle",
+            "Visite d'une coopérative de tapis berbères"
+        ],
+        "transaction": "38FOTBZM07"
+    },
+    {
+        "destination": "Wadi Rum Aventure",
+        "email": "xyz@gmail.com",
+        "nb_personne": "1",
+        "prix": "790.00",
+        "date_depart": "2025-04-05",
+        "options": [
+            "Observation du lever du soleil",
+            "Petit-déjeuner bédouin"
+        ],
+        "transaction": "RPNCD407SU"
+    }
+]
