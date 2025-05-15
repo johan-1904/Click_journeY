@@ -4,7 +4,7 @@
 	anonyme($_SESSION["prenom"]);	
 	bandeau($_SESSION["prenom"]); 
 
-$voyage = $_GET["voyage_actuel"] ?? "inconnu";
+
 $statut = $_GET["status"] ?? "inconnu";
 $transaction = $_GET["transaction"] ?? "non spécifiée";
 $montant = $_GET["montant"] ?? "inconnu";
@@ -13,7 +13,7 @@ $montant = $_GET["montant"] ?? "inconnu";
 	$content=file_get_contents('panier.json');
 	$paniers = json_decode(file_get_contents('panier.json'), true);
 	$historiques = json_decode(file_get_contents('historique.json'), true);
-
+	
 
 function est_accepte($statut){
 	if ($statut === "denied") {	
@@ -41,11 +41,6 @@ function est_accepte($statut){
 	<div class="test">
         <?php 
 		if (est_accepte($statut)): ?>
-           		<h2>Paiement confirmé ✅</h2>
-            		<p><strong>Voyage :</strong> <?= htmlspecialchars($voyage) ?></p>
-			<p><strong>Numéro de transaction :</strong> <?= htmlspecialchars($transaction) ?></p>
-            		<p><strong>Montant payé :</strong> <?= number_format((float)$montant, 2, ',', ' ') ?> €</p>
-            		<p>Merci pour votre achat ! Vous recevrez bientôt une confirmation par e-mail.</p>
 			<?php
 			foreach($paniers as $historique){
 				if($historique["transaction"]==$transaction){		
@@ -60,8 +55,14 @@ function est_accepte($statut){
 						"transaction" =>$historique['transaction']
 
     					];
-
-				break;
+					?>
+					<h2>Paiement confirmé ✅</h2>
+            				<p><strong>Voyage :</strong> <?= htmlspecialchars($historique['destination']) ?></p>
+					<p><strong>Numéro de transaction :</strong> <?= htmlspecialchars($transaction) ?></p>
+            				<p><strong>Montant payé :</strong> <?= number_format((float)$montant, 2, ',', ' ') ?> €</p>
+            				<p>Merci pour votre achat ! Vous recevrez bientôt une confirmation par e-mail.</p>
+					<?php
+					break;
 				}
 			}
 			file_put_contents('historique.json', json_encode($historiques, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
