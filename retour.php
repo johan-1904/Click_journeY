@@ -81,8 +81,8 @@ function est_accepte($statut){
             		<h2>Paiement échoué </h2>
             		<p>Votre transaction a été refusée par l'opérateur bancaire, vous retrouverez votre voyage dans le panier.</p>
             		<p>Veuillez réessayer ou utiliser un autre moyen de paiement.</p>
-            		<a href="paiement.php?voyage_actuel=<?= urlencode($voyage) ?>">
-                		<button>Retourner à la page de paiement</button>
+            		<a href="panier.php">
+                		<button>Mon panier</button>
             		</a>
         	<?php endif; ?>
 	</div>
