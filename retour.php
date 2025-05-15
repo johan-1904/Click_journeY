@@ -47,8 +47,8 @@ function est_accepte($statut){
 <body>
 	<div class="test">
         <?php 
-		if (est_accepte($statut)): ?>
-			<?php
+		if (est_accepte($statut)): 
+			$nouveaux_paniers = [];
 			foreach($paniers as $historique){
 				if($historique["transaction"]==$transaction){		
 					$historiques[] = [
@@ -69,14 +69,17 @@ function est_accepte($statut){
             				<p><strong>Montant payé :</strong> <?= number_format((float)$montant, 2, ',', ' ') ?> €</p>
             				<p>Merci pour votre achat ! Vous recevrez bientôt une confirmation par e-mail.</p>
 					<?php
-					break;
 				}
+				else {
+                      			 $nouveaux_paniers[] = $historique;
+        			}
 			}
 			file_put_contents('historique.json', json_encode($historiques, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+			file_put_contents('panier.json', json_encode($nouveaux_paniers, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 			?>
        		<?php else: ?>
             		<h2>Paiement échoué </h2>
-            		<p>Votre transaction a été refusée par l'opérateur bancaire.</p>
+            		<p>Votre transaction a été refusée par l'opérateur bancaire, vous retrouverez votre voyage dans le panier.</p>
             		<p>Veuillez réessayer ou utiliser un autre moyen de paiement.</p>
             		<a href="paiement.php?voyage_actuel=<?= urlencode($voyage) ?>">
                 		<button>Retourner à la page de paiement</button>

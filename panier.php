@@ -53,12 +53,10 @@ function afficherTrek1($trek, $index) {
 <h1>Mon panier</h1>
 <?php
 	    bandeau($_SESSION["prenom"]);
-	    $index = 0;
-            foreach($paniers as $panier) {
+            foreach($paniers as $cle => $panier) {
 		if ($panier['email'] === $_SESSION["email"]) {     
-                    afficherTrek1($panier, $index);
+                    afficherTrek1($panier, $cle);
                 }
-		$index++;
       	}
 ?>
 </div>
