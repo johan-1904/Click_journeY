@@ -1,11 +1,19 @@
 <?php
 session_start();
 require('fonctions.php');
+
+
+
+
 anonyme($_SESSION["prenom"]);
 bandeau($_SESSION["prenom"]);
 
+if (!isset($_POST["destination"])) {
+        header("Location: Présentation.php");
+    exit();
+}
 	
-$voyage =  $_POST["voyage_actuel"] ??  "inconnu";
+
 $destination = $_POST["destination"] ?? "inconnu";
 $date = $_POST["date_depart"] ?? "inconnue";
 $prix = $_POST["prix"] ?? 0;

@@ -1,6 +1,13 @@
 <?php
 	session_start();
 	require('fonctions.php');
+
+
+if (!isset($_GET["transaction"])) {
+        header("Location: Présentation.php");
+    exit();
+}
+
 	anonyme($_SESSION["prenom"]);	
 	bandeau($_SESSION["prenom"]); 
 

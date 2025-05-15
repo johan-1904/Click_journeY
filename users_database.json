@@ -6,7 +6,8 @@
         "password": "motdepasse",
         "adresse": "",
         "numero": "",
-        "admin": "oui"
+        "admin": "oui",
+        "banni": "non"
     },
     {
         "nom": "aa",
@@ -15,7 +16,8 @@
         "password": "aaaa",
         "adresse": "",
         "numero": "",
-        "admin": "non"
+        "admin": "non",
+        "banni": "non"
     },
     {
         "nom": "BULTELLE",
@@ -24,7 +26,8 @@
         "password": "ismajej",
         "adresse": "admin",
         "numero": "000000000",
-        "admin": "oui"
+        "admin": "oui",
+        "banni": "non"
     },
     {
         "nom": "Legros",
@@ -33,7 +36,8 @@
         "password": "jesuisgros",
         "adresse": "",
         "numero": "",
-        "admin": "non"
+        "admin": "non",
+        "banni": "non"
     },
     {
         "nom": "MARCHAND",
@@ -42,7 +46,8 @@
         "password": "l\u00e9onnatation",
         "adresse": "",
         "numero": "",
-        "admin": "non"
+        "admin": "non",
+        "banni": "non"
     },
     {
         "nom": "Riner",
@@ -51,7 +56,8 @@
         "password": "teddyjudo",
         "adresse": "",
         "numero": "",
-        "admin": "non"
+        "admin": "non",
+        "banni": "non"
     },
     {
         "nom": "LEBRUN",
@@ -60,7 +66,8 @@
         "password": "felixping",
         "adresse": "",
         "numero": "",
-        "admin": "non"
+        "admin": "non",
+        "banni": "non"
     },
     {
         "nom": "FILS",
@@ -69,7 +76,8 @@
         "password": "Arthurpere",
         "adresse": "",
         "numero": "",
-        "admin": "non"
+        "admin": "non",
+        "banni": "non"
     },
     {
         "nom": "DUPONT",
@@ -78,7 +86,8 @@
         "password": "antoinerugby",
         "adresse": "",
         "numero": "",
-        "admin": "non"
+        "admin": "non",
+        "banni": "non"
     },
     {
         "nom": "BEAUVAISIE",
@@ -87,7 +96,8 @@
         "password": "jeremstar",
         "adresse": "",
         "numero": "",
-        "admin": "non"
+        "admin": "non",
+        "banni": "oui"
     },
     {
         "nom": "Halhoute",
@@ -96,7 +106,8 @@
         "password": "ismaquarium",
         "adresse": "Belle \u00e9glise\r\n",
         "numero": "000000000",
-        "admin": "non"
+        "admin": "non",
+        "banni": "non"
     },
     {
         "nom": "final",
@@ -105,6 +116,17 @@
         "password": "testfinal",
         "adresse": "",
         "numero": "",
-        "admin": "non"
+        "admin": "non",
+        "banni": "non"
+    },
+    {
+        "nom": "Aqouar",
+        "prenom": "Ismael",
+        "email": "skyronebro41@gmail.com",
+        "password": "isma",
+        "adresse": "",
+        "numero": "",
+        "admin": "non",
+        "banni": "non"
     }
 ]

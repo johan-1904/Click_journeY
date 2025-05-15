@@ -5,13 +5,11 @@
 	anonyme($_SESSION["prenom"]);	
 ?>
 
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administration - DreamTrek</title>
     <link rel="stylesheet"  type="text/css" href="CSS/admin.css">
-    <script src="java/admin.js"></script> 
+   
 </head>
 <body>
   
@@ -39,9 +37,9 @@
             </tbody>
         </table>
     </main>
-
     <footer>
         <p>© 2025 DreamTrek - Admin Pannel</p>
     </footer>
+<script src="java/admin.js" defer></script> 
 </body>
 </html>

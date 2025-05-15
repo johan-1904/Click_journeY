@@ -29,7 +29,8 @@ if ($flag == true) {
 		"password" => $_POST["password"],
 		"adresse" => "",
 		"numero" => "",
-		"admin" => "non"
+		"admin" => "non",
+		"banni" => "non"
 	];
 	file_put_contents('users_database.json', json_encode($users, JSON_PRETTY_PRINT));
 	header('LOCATION: connexion.php');

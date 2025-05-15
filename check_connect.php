@@ -10,7 +10,12 @@ $flag = false;
 foreach($users as $user){
 	if($_POST["email"] == $user["email"] && $_POST["password"] == $user["password"]){
 		$flag = true;
+		if ($user["banni"] == "oui") {
+			header('Location: connexion.php?erreur=banni');
+			exit();
+		}
 	}
+	
 }
 if($flag == true){
 	$_SESSION["login"]= $_POST["email"];
@@ -22,6 +27,7 @@ if($flag == true){
 			$_SESSION["numero"] = $user["numero"];
 			$_SESSION["adresse"] = $user["adresse"];
 			$_SESSION["nom"] = $user["nom"];
+			$_SESSION["banni"] = $user["banni"];
 			break;
 		}
 	}

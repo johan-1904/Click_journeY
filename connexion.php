@@ -1,3 +1,14 @@
+<?php
+if (isset($_GET['erreur'])) {
+    if ($_GET['erreur'] == "banni") {
+       echo "<script>
+        alert('Vous avez été banni. Contactez un administrateur.');
+        window.location.href = 'connexion.php';
+    </script>";
+    }     
+}
+?>
+
 <!DOCTYPE html>
 
 <html>

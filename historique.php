@@ -3,7 +3,7 @@ session_start();
 require('fonctions.php');
 
 $json1 = file_get_contents("historique.json");
-$paniers = json_decode($json1, true);
+$historiques = json_decode($json1, true);
 
 
 
@@ -53,10 +53,10 @@ function afficherTrek1($trek) {
 <?php
 	    bandeau($_SESSION["prenom"]);
 
-if(!empty($paniers)){
-            foreach($paniers as $panier) {
-		if ($panier["email"] == $_SESSION["email"]) {     
-                    afficherTrek1($panier);
+if(!empty($historiques)){
+            foreach($historiques as $historique) {
+		if ($historique["email"] == $_SESSION["email"]) {     
+                    afficherTrek1($historique);
                 }
       	}
 }
