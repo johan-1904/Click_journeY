@@ -77,8 +77,8 @@ td {
 }
 
 
-button.ban {
-    background: #ff4444;
+.ban {
+    background: white;
     border: none;
     padding: 8px 12px;
     color: white;
@@ -86,8 +86,12 @@ button.ban {
     border-radius: 5px;
 }
 
-button.ban:hover {
-    background: #cc0000;
+.debanni {
+    background-color: #ff4444; 
+}
+
+.banni {
+    background-color: #44c767; 
 }
 
 

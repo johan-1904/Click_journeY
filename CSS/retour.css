@@ -7,6 +7,15 @@
    
 }
 
+body {
+  margin-top: 80px;
+  background-image: url('background/IMG_0750.jpg'); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+}
+
 .test {
     min-height: 51px;
     width : 700px;
@@ -17,21 +26,6 @@
     border-radius : 10px;
     box-shadow : 0 0 2px rgba(0, 0, 0, 0.8);
 }
-
-.test button{
-    
-    background-color: #b84a28;
-    color: white;
-    border: none;
-    padding: 8px 16px; 
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: bold;
-    
-}
-
 
 footer {
     position: fixed;
