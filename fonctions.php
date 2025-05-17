@@ -82,15 +82,16 @@ function affiche_utilisateur(){
 		    $texte_bouton = ($etat === "banni") ? "Débannir" : "Bannir";
 		    ?>
 		    <td>
-    			<form method="POST" action="bannir_utilisateur.php" class="ban-form">
-        			<input type="hidden" name="email" value="<?php echo $user['email']; ?>">
-        			<input type="hidden" name="banni" value="<?php echo ($user['banni'] === 'oui') ? 'non' : 'oui'; ?>">
-        			<button type="button" onclick="bannir(this)"
-					data-etat="<?php echo ($user['banni'] === 'oui') ? 'banni' : 'debanni'; ?>"
-					class="ban <?php echo ($user['banni'] === 'oui') ? 'banni' : 'debanni'; ?>">
-					<?php echo ($user['banni'] === 'oui') ? 'Débannir' : 'Bannir'; ?>
-				</button>
-    			</form>
+    			<form class="ban-form">
+    				<input type="hidden" name="email" value="<?php echo $user['email']; ?>">
+    				<input type="hidden" name="banni" value="<?php echo ($user['banni'] === 'oui') ? 'non' : 'oui'; ?>">
+    				<button type="button"
+            			onclick="bannir(this)"
+            			data-etat="<?php echo ($user['banni'] === 'oui') ? 'banni' : 'debanni'; ?>"
+            			class="ban <?php echo ($user['banni'] === 'oui') ? 'banni' : 'debanni'; ?>">
+        				<?php echo ($user['banni'] === 'oui') ? 'Débannir' : 'Bannir'; ?>
+    				</button>
+			</form>
 		   </td>
                 </tr>
                 <?php
