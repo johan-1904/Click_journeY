@@ -1,35 +1,31 @@
 function mettreAJourPrix() {
-
-
     const tarifBase = parseFloat(document.getElementById("tarifBase").value) || 0;
     const nb = parseInt(document.getElementById("nb_personnes").value) || 1;
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    let totalOptions = 0;
-
+    
+    let options = [];
     checkboxes.forEach(cb => {
-        totalOptions += parseFloat(cb.value);
+        options.push(cb.value);
     });
 
-    const totalFinal = (totalOptions + tarifBase) * nb;
-    
-    
-    document.getElementById("prixOptions").textContent = totalFinal.toFixed(2) + " €";
-    document.getElementById("prix_total_input").value = totalFinal.toFixed(2);
-
-    
     const requete = new XMLHttpRequest();
-    requete.open("POST", "/sauver-prix.php", true); 
+    requete.open("POST", "sauver-prix.php", true);
     requete.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
     requete.onreadystatechange = function () {
         if (requete.readyState === 4 && requete.status === 200) {
-            console.log("Réponse du serveur :", totalFinal.toFixed(2));
+            const response = JSON.parse(requete.responseText);
+            document.getElementById("prixOptions").textContent = response.prix + " €";
+            document.getElementById("prix_total_input").value = response.prix;
+            console.log("Total calculé par le serveur :", response.prix);
         }
     };
 
-    const params = "prix_total=" + encodeURIComponent(totalFinal.toFixed(2));
+    const params = "tarif_base=" + encodeURIComponent(tarifBase)
+                + "&nb_personnes=" + encodeURIComponent(nb)
+                + "&options=" + encodeURIComponent(JSON.stringify(options));
+
     requete.send(params);
 }
 
-window.addEventListener("DOMContentLoaded", mettreAJourPrix)
-
+window.addEventListener("DOMContentLoaded", mettreAJourPrix);
