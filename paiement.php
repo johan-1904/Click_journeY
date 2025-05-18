@@ -27,7 +27,7 @@ include('getapikey.php');
 $transaction =  genererTransaction(10, 24);
 $montant = $prix;
 $vendeur = 'MI-1_C';
-$retour = 'http://localhost/mon_projet/retour.php';
+$retour = 'http://localhost:5454/retour.php';
 $api_key = getAPIKey($vendeur);
 $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
 ajouter_transaction($destination, $date, $prix, $nb_personnes, $option, $_SESSION["email"], $transaction); 
