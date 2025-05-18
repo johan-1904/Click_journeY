@@ -5,10 +5,8 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mon compte</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	<link id="css" rel="stylesheet" href="CSS/Profil.css"> <!-- Par défaut en mode clair -->
@@ -36,7 +34,6 @@
 		</div>
 
 		<?php
-		// Fonction pour afficher les informations du profil
 		afficher_paramètres($_SESSION["nom"], $_SESSION["prenom"], $_SESSION["email"], $_SESSION["numero"], $_SESSION["adresse"]);
 		?>
 	</div>
