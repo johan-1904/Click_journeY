@@ -129,3 +129,38 @@ footer {
 .pagination .active {
         font-weight: bold;
         background-color: #b1573a;
+}
+button {
+    background-color: #ffffff; 
+    color: #ff9800;            
+    padding: 10px 20px;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9800; 
+    color: #ffffff;            
+    border-color: #ff9800;
+}
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: #b84a28;
+  border: 2px solid #b84a28;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#theme-toggle:hover {
+  background-color: #b84a28;
+  color: white;
+}
