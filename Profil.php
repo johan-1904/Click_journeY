@@ -24,8 +24,7 @@
 	
 			<div class="menu">
 				<a href="#" class="menu-link"><i class="fa-solid fa-user-circle menu-icon"></i>Mon compte</a>
-				<a href="#" class="menu-link"><i class="fa-solid fa-bell menu-icon"></i>Notifications</a>
-				<a href="#" class="menu-link"><i class="fa-solid fa-gear menu-icon"></i>Paramètres</a>
+				<a href="Présentation.php" class="menu-link"><i class="fa-solid fa-user-circle menu-icon"></i>Accueil</a>
 				<a href="panier.php" class="menu-link"><i class="fa-solid fa-basket-shopping menu-icon"></i>Mon panier</a>
 				<a href="historique.php" class="menu-link"><i class="fa-solid fa-clock-rotate-left menu-icon"></i>Historique</a>
 				<?php admin($_SESSION["admin"]); ?>
