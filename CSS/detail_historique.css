@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -54,4 +56,46 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 13px; 
+}t: fixed;
+    background-position: center;
+    height: 100vh;
+    color: #f0f0f0;
+}
+
+.payer {
+    min-height: 51px;
+    width: 700px;
+    margin: 90px auto 20px;
+    background: rgba(30, 30, 30, 0.95); /* fond sombre semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.payer button {
+    background-color: #b84a28;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.payer button:hover {
+    background-color: #a23d1b;
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    align-items: left;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+    color: #ccc;
 }
