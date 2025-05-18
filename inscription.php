@@ -24,7 +24,7 @@
 			</div>
 		</div>	
 		<label>Adresse Mail</label>
-		<input id="champs-email" type="email" name="email">
+		<input id="champ-email" type="email" name="email">
 		<label>Mot de passe</label>
 		
 		<div class="motdepasse">

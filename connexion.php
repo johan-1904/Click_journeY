@@ -24,7 +24,7 @@ if (isset($_GET['erreur'])) {
 		<h4>CONNEXION</h4>
 		<hr>
 		<label>Adresse Mail</label>
-		<input type="email" name="email">
+		<input type="email" name="email" id="champ-email">
 		<label>Mot de passe</label>
 		<div class="motdepasse">
 		
